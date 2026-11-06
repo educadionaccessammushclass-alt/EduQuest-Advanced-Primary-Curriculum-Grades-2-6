@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>EduQuest | Education Access E-Learning Academy</title>
+
+  <meta name="description" content="EduQuest is the Education Access advanced primary curriculum and digital learning initiative for Grades 2–6, designed for academic excellence and competency-based progression.">
+
+  <meta name="theme-color" content="#082653">
+
+  <style>
+    :root {
+      --navy: #082653;
+      --navy-deep: #04172f;
+      --blue: #083d91;
+      --teal: #00a884;
+      --gold: #d4af37;
+      --cream: #fff9ef;
+      --white: #ffffff;
+      --ink: #182b43;
+      --muted: #6b7a8d;
+      --line: #e5eaf0;
+      --surface: #f4f7fa;
+      --shadow: 0 14px 40px rgba(4, 23, 47, .08);
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1160px, 91%);
+      margin: auto;
+    }
+
+    /* NAVIGATION */
+
+    .topbar {
+      background: var(--navy-deep);
+      color: #dce8f7;
+      font-size: 12px;
+      padding: 8px 0;
+    }
+
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,.97);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(12px);
+    }
+
+    .navbar {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 230px;
+    }
+
+    .brand-mark {
+      width: 45px;
+      height: 45px;
+      background: var(--navy);
+      color: var(--gold);
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      font-size: 19px;
+      letter-spacing: -1px;
+    }
+
+    .brand-name {
+      font-size: 18px;
+      font-weight: 850;
+      color: var(--navy);
+      letter-spacing: -.5px;
+      line-height: 1.2;
+    }
+
+    .brand-sub {
+      display: block;
+      font-size: 10px;
+      font-weight: 650;
+      letter-spacing: 1.2px;
+      color: var(--muted);
+      margin-top: 4px;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      font-size: 13px;
+      font-weight: 650;
+      color: #45556a;
+    }
+
+    .nav-links a:hover {
+      color: var(--teal);
+    }
+
+    .nav-cta {
+      background: var(--navy);
+      color: white !important;
+      padding: 11px 17px;
+      border-radius: 9px;
+    }
+
+    /* HERO */
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 85% 15%, rgba(0,168,132,.22), transparent 28%),
+        linear-gradient(125deg, var(--navy-deep), var(--navy) 65%, #0b3975);
+      color: white;
+      padding: 100px 0 95px;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 50%;
+      right: -120px;
+      bottom: -230px;
+      box-shadow:
+        0 0 0 45px rgba(255,255,255,.025),
+        0 0 0 90px rgba(255,255,255,.02);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.3fr .7fr;
+      gap: 55px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: #a9e7d9;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 24px;
+      height: 2px;
+      background: var(--gold);
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 5.5vw, 66px);
+      line-height: 1.08;
+      letter-spacing: -2.3px;
+      max-width: 700px;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 span {
+      color: var(--gold);
+    }
+
+    .hero-copy {
+      color: #d0dced;
+      font-size: 16px;
+      max-width: 630px;
+      margin-bottom: 32px;
+      line-height: 1.85;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 21px;
+      border-radius: 9px;
+      font-weight: 750;
+      font-size: 13px;
+      transition: .2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: var(--navy-deep);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,.4);
+      color: white;
+    }
+
+    .hero-panel {
+      background: rgba(255,255,255,.075);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 22px;
+      padding: 30px;
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-panel-label {
+      color: #a9e7d9;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.7px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .hero-panel h2 {
+      font-size: 24px;
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+
+    .hero-panel p {
+      color: #cbd8e8;
+      font-size: 13px;
+      margin-bottom: 23px;
+    }
+
+    .hero-stat {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid rgba(255,255,255,.15);
+      padding: 13px 0;
+      font-size: 12px;
+      color: #d7e2f0;
+    }
+
+    .hero-stat strong {
+      color: var(--gold);
+      font-size: 15px;
+    }
+
+    /* INTRODUCTION */
+
+    .intro {
+      padding: 75px 0;
+      background: var(--cream);
+    }
+
+    .section-heading {
+      max-width: 730px;
+      margin-bottom: 38px;
+    }
+
+    .section-tag {
+      color: var(--teal);
+      font-size: 11px;
+      font-weight: 850;
+      text-transform: uppercase;
+      letter-spacing: 1.7px;
+      margin-bottom: 12px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(27px, 3.5vw, 39px);
+      color: var(--navy);
+      line-height: 1.2;
+      letter-spacing: -1px;
+      margin-bottom: 14px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .principles {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .principle {
+      background: white;
+      padding: 27px;
+      border-radius: var(--radius);
+      border: 1px solid #eee9df;
+    }
+
+    .principle-number {
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .principle h3 {
+      color: var(--navy);
+      font-size: 17px;
+      margin-bottom: 9px;
+    }
+
+    .principle p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* GRADES */
+
+    .grades {
+      padding: 85px 0;
+    }
+
+    .grade-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 15px;
+    }
+
+    .grade-card {
+      border: 1px solid var(--line);
+      padding: 23px 16px;
+      border-radius: 15px;
+      transition: .2s;
+      background: white;
+      text-align: center;
+    }
+
+    .grade-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+      border-color: var(--teal);
+    }
+
+    .grade-number {
+      display: block;
+      font-size: 35px;
+      font-weight: 900;
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+
+    .grade-card h3 {
+      font-size: 14px;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+
+    .grade-card p {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .grade-note {
+      margin-top: 20px;
+      padding: 16px 19px;
+      background: var(--surface);
+      border-left: 3px solid var(--gold);
+      border-radius: 5px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* ACADEMIC FRAMEWORK */
+
+    .framework {
+      background: var(--surface);
+      padding: 85px 0;
+    }
+
+    .framework-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .framework-card {
+      background: white;
+      border: 1px solid var(--line);
+      padding: 27px;
+      border-radius: var(--radius);
+    }
+
+    .framework-card .card-label {
+      font-size: 10px;
+      color: var(--teal);
+      font-weight: 850;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .framework-card h3 {
+      font-size: 20px;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+
+    .framework-card p {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 19px;
+    }
+
+    .resource-links {
+      display: grid;
+      gap: 9px;
+    }
+
+    .resource-links a {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+      border: 1px solid var(--line);
+      padding: 11px 13px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 650;
+      color: var(--blue);
+      transition: .2s;
+    }
+
+    .resource-links a:hover {
+      background: #eef7f5;
+      border-color: var(--teal);
+    }
+
+    .resource-links a span {
+      color: var(--teal);
+      white-space: nowrap;
+    }
+
+    /* LEARNING MODEL */
+
+    .learning {
+      padding: 85px 0;
+    }
+
+    .learning-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 17px;
+    }
+
+    .learning-card {
+      padding: 23px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+    }
+
+    .learning-card .step {
+      color: var(--gold);
+      font-size: 25px;
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+
+    .learning-card h3 {
+      color: var(--navy);
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
+
+    .learning-card p {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* TRANSPARENCY */
+
+    .development {
+      padding: 70px 0;
+      background: var(--navy);
+      color: white;
+    }
+
+    .development-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 45px;
+      align-items: start;
+    }
+
+    .development h2 {
+      font-size: 32px;
+      line-height: 1.2;
+      margin-bottom: 15px;
+    }
+
+    .development-copy {
+      color: #c8d6e8;
+      font-size: 14px;
+    }
+
+    .status-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .status-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 14px;
+      background: rgba(255,255,255,.07);
+      border-radius: 10px;
+    }
+
+    .status-dot {
+      width: 9px;
+      height: 9px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      background: var(--gold);
+      margin-top: 7px;
+    }
+
+    .status-item strong {
+      display: block;
+      font-size: 13px;
+      margin-bottom: 3px;
+    }
+
+    .status-item p {
+      color: #c8d6e8;
+      font-size: 11px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: var(--navy-deep);
+      color: #c7d3e2;
+      padding: 45px 0 20px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 35px;
+      padding-bottom: 35px;
+    }
+
+    .footer-brand {
+      color: white;
+      font-size: 20px;
+      font-weight: 850;
+      margin-bottom: 12px;
+    }
+
+    .footer-grid p {
+      font-size: 12px;
+      color: #aebed0;
+      max-width: 350px;
+    }
+
+    .footer-grid h3 {
+      font-size: 12px;
+      color: var(--gold);
+      margin-bottom: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 9px;
+      font-size: 12px;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .copyright {
+      border-top: 1px solid rgba(255,255,255,.13);
+      padding-top: 19px;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      font-size: 11px;
+      color: #91a5bb;
+    }
+
+    /* RESPONSIVE DESIGN */
+
+    @media (max-width: 850px) {
+      .nav-links {
+        gap: 12px;
+        font-size: 11px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-panel {
+        max-width: 480px;
+      }
+
+      .grade-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .learning-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .topbar-inner {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .navbar {
+        min-height: 68px;
+        flex-wrap: wrap;
+        padding: 12px 0;
+      }
+
+      .brand {
+        min-width: 0;
+      }
+
+      .nav-links {
+        width: 100%;
+        overflow-x: auto;
+        padding: 8px 0 4px;
+        gap: 20px;
+        white-space: nowrap;
+      }
+
+      .nav-cta {
+        padding: 7px 10px;
+      }
+
+      .hero {
+        padding: 70px 0;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero-copy {
+        font-size: 14px;
+      }
+
+      .intro,
+      .grades,
+      .framework,
+      .learning {
+        padding: 60px 0;
+      }
+
+      .principles,
+      .framework-grid,
+      .development-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .grade-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .learning-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .framework-card {
+        padding: 21px;
+      }
+
+      .development h2 {
+        font-size: 27px;
+      }
+
+      .footer-grid {
+        gap: 25px;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .hero h1 {
+        font-size: 35px;
+      }
+
+      .grade-grid,
+      .learning-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>EDUCATION ACCESS E-LEARNING ACADEMY</span>
+      <span>Advanced Primary Curriculum | Grades 2–6</span>
+    </div>
+  </div>
+
+  <header>
+    <div class="container navbar">
+
+      <a href="#home" class="brand">
+        <div class="brand-mark">EA</div>
+        <div>
+          <div class="brand-name">EDUQUEST</div>
+          <span class="brand-sub">Education Access Academy</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#grades">Grades</a>
+        <a href="#curriculum">Curriculum</a>
+        <a href="#learning">Learning Model</a>
+        <a href="#curriculum" class="nav-cta">Explore Academy</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO SECTION -->
+
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+
+        <div>
+          <div class="eyebrow">
+            A New Standard in Primary Education
+          </div>
+
+          <h1>
+            Learning Beyond
+            <span>the Ordinary.</span>
+          </h1>
+
+          <p class="hero-copy">
+            EduQuest is an advanced primary curriculum initiative
+            developed by Education Access E-Learning Academy.
+            It brings together rigorous academic foundations,
+            competency-based learning, structured assessment
+            and progressive intellectual development for
+            learners in Grades 2–6.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#grades" class="btn btn-gold">
+              Explore Grade Pathways
+            </a>
+
+            <a href="#curriculum" class="btn btn-outline">
+              View Academic Framework
+            </a>
+          </div>
+        </div>
+
+        <aside class="hero-panel">
+          <div class="hero-panel-label">
+            The EduQuest Academic Programme
+          </div>
+
+          <h2>Building Knowledge. Developing Capability.</h2>
+
+          <p>
+            A coherent learning progression that connects
+            foundational knowledge, analytical thinking,
+            application and academic mastery.
+          </p>
+
+          <div class="hero-stat">
+            <span>Academic coverage</span>
+            <strong>Grades 2–6</strong>
+          </div>
+
+          <div class="hero-stat">
+            <span>Curriculum approach</span>
+            <strong>Competency-based</strong>
+          </div>
+
+          <div class="hero-stat">
+            <span>National reference</span>
+            <strong>TIE-aligned</strong>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+
+    <section class="intro" id="about">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="section-tag">Our Educational Philosophy</div>
+
+          <h2>Education designed for understanding, not memorisation alone.</h2>
+
+          <p>
+            Our curriculum development approach seeks to strengthen
+            conceptual understanding, communication, independent
+            thinking and the ability to apply knowledge to real-life
+            situations. National curriculum alignment provides the
+            foundation, while carefully designed academic progression
+            establishes a higher standard of learning.
+          </p>
+        </div>
+
+        <div class="principles">
+
+          <article class="principle">
+            <div class="principle-number">01</div>
+            <h3>Academic Rigour</h3>
+            <p>
+              Structured subject knowledge, progressive intellectual
+              challenge and carefully sequenced learning outcomes.
+            </p>
+          </article>
+
+          <article class="principle">
+            <div class="principle-number">02</div>
+            <h3>Competency Development</h3>
+            <p>
+              Emphasis on critical thinking, problem-solving,
+              communication, creativity and practical application.
+            </p>
+          </article>
+
+          <article class="principle">
+            <div class="principle-number">03</div>
+            <h3>Evidence-Based Assessment</h3>
+            <p>
+              Assessment designed to establish what learners know,
+              understand and can independently demonstrate.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- GRADES -->
+
+    <section class="grades" id="grades">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="section-tag">Academic Pathways</div>
+
+          <h2>A connected learning journey across five grade levels.</h2>
+
+          <p>
+            EduQuest is being developed as a coherent academic
+            programme in which each grade builds upon the
+            knowledge and competencies established in the
+            preceding grade.
+          </p>
+        </div>
+
+        <div class="grade-grid">
+
+          <article class="grade-card">
+            <span class="grade-number">02</span>
+            <h3>Grade Two</h3>
+            <p>Foundational development</p>
+          </article>
+
+          <article class="grade-card">
+            <span class="grade-number">03</span>
+            <h3>Grade Three</h3>
+            <p>Knowledge consolidation</p>
+          </article>
+
+          <article class="grade-card">
+            <span class="grade-number">04</span>
+            <h3>Grade Four</h3>
+            <p>Conceptual expansion</p>
+          </article>
+
+          <article class="grade-card">
+            <span class="grade-number">05</span>
+            <h3>Grade Five</h3>
+            <p>Advanced application</p>
+          </article>
+
+          <article class="grade-card">
+            <span class="grade-number">06</span>
+            <h3>Grade Six</h3>
+            <p>Academic readiness</p>
+          </article>
+
+        </div>
+
+        <div class="grade-note">
+          Grade cards currently describe the programme's academic
+          coverage. Individual learner dashboards and grade-specific
+          lesson navigation will be connected as their learning
+          resources and application functions are implemented.
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CURRICULUM FRAMEWORK -->
+
+    <section class="framework" id="curriculum">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="section-tag">Academic Infrastructure</div>
+
+          <h2>The intellectual architecture behind EduQuest.</h2>
+
+          <p>
+            The platform is grounded in documented curriculum
+            governance, subject architecture, national alignment,
+            grade progression and assessment standards.
+            These are direct links to the repository's
+            academic framework documents.
+          </p>
+        </div>
+
+        <div class="framework-grid">
+
+          <article class="framework-card">
+
+            <div class="card-label">01 / Curriculum Architecture</div>
+
+            <h3>Curriculum Framework</h3>
+
+            <p>
+              The academic foundations governing curriculum
+              design, subject organisation, national alignment
+              and progression across Grades 2–6.
+            </p>
+
+            <div class="resource-links">
+
+              <a href="curriculum-framework/00-curriculum-governance.md">
+                Curriculum Governance
+                <span>View →</span>
+              </a>
+
+              <a href="curriculum-framework/01-master-subject-architecture.md">
+                Master Subject Architecture
+                <span>View →</span>
+              </a>
+
+              <a href="curriculum-framework/02-national-curriculum-alignment-matrix.md">
+                National Curriculum Alignment
+                <span>View →</span>
+              </a>
+
+              <a href="curriculum-framework/04-grade-progression-matrix.md">
+                Grade Progression Matrix
+                <span>View →</span>
+              </a>
+
+            </div>
+          </article>
+
+          <article class="framework-card">
+
+            <div class="card-label">02 / Assessment Architecture</div>
+
+            <h3>Assessment and Quality Assurance</h3>
+
+            <p>
+              Assessment standards, marking principles and
+              moderation structures intended to support
+              reliable evidence of learner achievement.
+            </p>
+
+            <div class="resource-links">
+
+              <a href="assessment-framework/01-assessment-rubrics.md">
+                Assessment Rubrics
+                <span>View →</span>
+              </a>
+
+              <a href="assessment-framework/02-grade-level-assessment-instruments.md">
+                Grade-Level Assessment Instruments
+                <span>View →</span>
+              </a>
+
+              <a href="assessment-framework/03-assessment-frequency-and-progression.md">
+                Assessment Frequency and Progression
+                <span>View →</span>
+              </a>
+
+              <a href="assessment-framework/04-assessment-marking-and-moderation.md">
+                Marking and Moderation
+                <span>View →</span>
+              </a>
+
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- LEARNING MODEL -->
+
+    <section class="learning" id="learning">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="section-tag">Our Learning Model</div>
+
+          <h2>From knowledge acquisition to demonstrated mastery.</h2>
+
+          <p>
+            The intended instructional model connects teaching,
+            active learning, assessment and feedback in a
+            continuous cycle of academic development.
+          </p>
+        </div>
+
+        <div class="learning-grid">
+
+          <article class="learning-card">
+            <div class="step">01</div>
+            <h3>Discover</h3>
+            <p>
+              Introduce concepts, activate prior knowledge
+              and establish clear learning objectives.
+            </p>
+          </article>
+
+          <article class="learning-card">
+            <div class="step">02</div>
+            <h3>Understand</h3>
+            <p>
+              Develop conceptual understanding through
+              explanation, examples and guided inquiry.
+            </p>
+          </article>
+
+          <article class="learning-card">
+            <div class="step">03</div>
+            <h3>Apply</h3>
+            <p>
+              Use knowledge through structured exercises,
+              practical tasks and problem-solving.
+            </p>
+          </article>
+
+          <article class="learning-card">
+            <div class="step">04</div>
+            <h3>Demonstrate Mastery</h3>
+            <p>
+              Evaluate understanding through evidence,
+              feedback and progressively challenging assessment.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- DEVELOPMENT STATUS -->
+
+    <section class="development">
+      <div class="container development-grid">
+
+        <div>
+          <div class="eyebrow">Platform Development</div>
+
+          <h2>Built on academic substance. Developed with integrity.</h2>
+
+          <p class="development-copy">
+            EduQuest is being developed progressively.
+            The curriculum and assessment documentation
+            provide its academic foundation. The interactive
+            learning environment will be connected to actual
+            curriculum data as the application is implemented.
+            Platform capabilities will be identified honestly
+            throughout development.
+          </p>
+        </div>
+
+        <div class="status-list">
+
+          <div class="status-item">
+            <span class="status-dot"></span>
+            <div>
+              <strong>Curriculum documentation</strong>
+              <p>Academic framework resources established in the repository.</p>
+            </div>
+          </div>
+
+          <div class="status-item">
+            <span class="status-dot"></span>
+            <div>
+              <strong>Assessment framework</strong>
+              <p>Assessment standards and instruments being developed.</p>
+            </div>
+          </div>
+
+          <div class="status-item">
+            <span class="status-dot"></span>
+            <div>
+              <strong>Interactive learning environment</strong>
+              <p>To be implemented and connected to real learning resources.</p>
+            </div>
+          </div>
+
+          <div class="status-item">
+            <span class="status-dot"></span>
+            <div>
+              <strong>Learner accounts and database</strong>
+              <p>Authentication, secure storage and live learner records are not yet implemented.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer>
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+          <div class="footer-brand">EDUQUEST</div>
+          <p>
+            An advanced primary curriculum initiative
+            of Education Access E-Learning Academy,
+            focused on academic excellence, educational
+            access and meaningful learner development.
+          </p>
+        </div>
+
+        <div>
+          <h3>Explore</h3>
+          <div class="footer-links">
+            <a href="#about">About EduQuest</a>
+            <a href="#grades">Grade Pathways</a>
+            <a href="#curriculum">Academic Framework</a>
+            <a href="#learning">Learning Model</a>
+          </div>
+        </div>
+
+        <div>
+          <h3>Academic Resources</h3>
+          <div class="footer-links">
+            <a href="curriculum-framework/00-curriculum-governance.md">
+              Curriculum Governance
+            </a>
+            <a href="curriculum-framework/01-master-subject-architecture.md">
+              Subject Architecture
+            </a>
+            <a href="assessment-framework/01-assessment-rubrics.md">
+              Assessment Rubrics
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="copyright">
+        <span>
+          © <span id="year"></span> Education Access E-Learning Academy.
+          All rights reserved.
+        </span>
+
+        <span>EduQuest | Advanced Primary Curriculum Grades 2–6</span>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
